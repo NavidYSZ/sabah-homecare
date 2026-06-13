@@ -1,7 +1,8 @@
 # Sabah Home Care — Website
 
 A polished, single-page marketing website for **Sabah Home Care, LLC**, a Virginia‑licensed,
-locally owned in‑home care agency based in Chantilly, serving families across Northern Virginia.
+locally owned **homecare service** in Chantilly (Fairfax County), serving families across Northern Virginia.
+Optimized for the local search term **“homecare service Fairfax.”**
 
 This repository is the **source of truth** for the site. The website is **stored here on GitHub**,
 and the production **server pulls the latest version from this repo**. GitHub Pages is intentionally **not** used.
@@ -31,6 +32,7 @@ Why Us · How It Works · Testimonials · Service Area (Northern Virginia map) �
 | | |
 |---|---|
 | **Name** | Sabah Home Care, LLC |
+| **Website** | https://sabah-homecare.com |
 | **Phone** | (571) 315‑8263 |
 | **Email** | sabahhomecare@yahoo.com |
 | **Address** | 4221 Walney Road, Suite 500‑C, Chantilly, VA 20151 |
@@ -94,8 +96,9 @@ curl -fsSL https://raw.githubusercontent.com/NavidYSZ/sabah-homecare/main/index.
 > [deploy key](https://docs.github.com/authentication/connecting-to-github-with-ssh/managing-deploy-keys)
 > or a fine-grained token, and clone via SSH (`git@github.com:NavidYSZ/sabah-homecare.git`).
 
-Once your server is serving the site on a real domain, set the canonical/OG URL near the top of
-`index.html` (there's a commented placeholder for it).
+The canonical/OpenGraph URLs in `index.html` are set to **https://sabah-homecare.com** (and there's
+a `LocalBusiness` JSON-LD block for local SEO). If you ever serve from a different host/domain, update
+those URLs near the top of the file.
 
 ---
 
