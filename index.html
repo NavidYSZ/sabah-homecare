@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sabah Home Care | Compassionate In-Home Care in Northern Virginia</title>
+<meta name="description" content="Sabah Home Care is a Virginia-licensed, locally owned home care agency in Chantilly, VA. Personal care, companion care, skilled nursing, therapy, respite and 24-hour care across Northern Virginia. Call (571) 315-8263 for a free consultation.">
+<meta name="theme-color" content="#15616d">
+<link rel="canonical" href="https://navidysz.github.io/sabah-homecare/">
+
+<!-- Open Graph / social -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sabah Home Care | Compassionate In-Home Care in Northern Virginia">
+<meta property="og:description" content="Locally owned, Virginia-licensed in-home senior care in Chantilly & across Northern Virginia. Free consultation: (571) 315-8263.">
+<meta property="og:url" content="https://navidysz.github.io/sabah-homecare/">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Favicon: a dawn rising over a home with a heart (Sabah = "morning") -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%2315616d'/%3E%3Cpath d='M16 16a8 8 0 0 1 16 0' fill='none' stroke='%23f2b35f' stroke-width='2.4' stroke-linecap='round'/%3E%3Cpath d='M24 18.5l10 7.8V39a1.6 1.6 0 0 1-1.6 1.6H15.6A1.6 1.6 0 0 1 14 39V26.3z' fill='%23dcecee'/%3E%3Cpath d='M24 36.4c-3-2-5-3.6-5-5.8 0-1.5 1.2-2.5 2.6-2.5 1 0 1.7.5 2.4 1.4.7-.9 1.4-1.4 2.4-1.4 1.4 0 2.6 1 2.6 2.5 0 2.2-2 3.8-5 5.8z' fill='%23e2a04a'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    /* Brand — a "dawn" palette: deep teal night warming into golden morning */
+    --teal-900:#0e3a44;
+    --teal-800:#103e49;
+    --teal-700:#15616d;
+    --teal-600:#1b7d8c;
+    --teal-300:#9ec7ce;
+    --teal-100:#dcecee;
+    --teal-50:#eef6f7;
+
+    --gold:#e2a04a;
+    --gold-soft:#f2b35f;
+    --gold-deep:#c47f2f;
+    --peach:#f6c89a;
+
+    --cream:#fbf6ee;
+    --cream-2:#f4ecdd;
+    --ink:#21333a;
+    --ink-soft:#566570;
+    --line:#e7ddc9;
+    --white:#ffffff;
+
+    --shadow:0 22px 48px -18px rgba(14,58,68,.28);
+    --shadow-sm:0 10px 26px -14px rgba(14,58,68,.22);
+    --shadow-lg:0 40px 80px -28px rgba(14,58,68,.40);
+    --radius:18px;
+    --radius-sm:12px;
+    --maxw:1180px;
+    --ease:cubic-bezier(.2,.7,.2,1);
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    font-size:18px;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4{font-family:"Fraunces","Georgia",serif;color:var(--teal-900);line-height:1.12;margin:0 0 .5em;font-weight:600;letter-spacing:-.01em;}
+  h1{font-size:clamp(2.3rem,5.2vw,3.7rem);font-weight:500;letter-spacing:-.02em;}
+  h2{font-size:clamp(1.85rem,3.4vw,2.7rem);}
+  h3{font-size:1.32rem;}
+  p{margin:0 0 1.1em;color:var(--ink-soft);}
+  a{color:var(--teal-700);text-decoration:none;}
+  img{max-width:100%;display:block;}
+  ul{margin:0;padding:0;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  .em{font-style:italic;font-family:"Fraunces",serif;font-weight:500;color:var(--gold-deep);}
+
+  /* Skip link */
+  .skip{position:absolute;left:-999px;top:8px;z-index:200;background:#fff;color:var(--teal-900);
+    padding:10px 16px;border-radius:8px;box-shadow:var(--shadow-sm);font-weight:700;}
+  .skip:focus{left:12px;}
+  :focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px;}
+
+  /* Buttons */
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;font-family:"Inter";font-weight:700;font-size:1rem;
+    padding:15px 28px;border-radius:11px;cursor:pointer;border:2px solid transparent;
+    transition:transform .18s var(--ease),background .2s ease,box-shadow .25s ease,color .2s ease;
+    line-height:1;text-align:center;white-space:nowrap;
+  }
+  .btn svg{flex:none;}
+  .btn-gold{background:linear-gradient(180deg,var(--gold-soft),var(--gold));color:#3a2a10;
+    box-shadow:0 12px 26px -8px rgba(201,138,63,.6),inset 0 1px 0 rgba(255,255,255,.4);}
+  .btn-gold:hover{transform:translateY(-3px);box-shadow:0 18px 34px -10px rgba(201,138,63,.7),inset 0 1px 0 rgba(255,255,255,.4);}
+  .btn-outline{background:transparent;color:var(--teal-900);border-color:var(--teal-300);}
+  .btn-outline:hover{background:var(--teal-50);border-color:var(--teal-600);transform:translateY(-2px);}
+  .btn-white{background:#fff;color:var(--teal-900);box-shadow:var(--shadow-sm);}
+  .btn-white:hover{transform:translateY(-3px);box-shadow:var(--shadow);}
+  .btn-ghost-light{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.4);backdrop-filter:blur(4px);}
+  .btn-ghost-light:hover{background:rgba(255,255,255,.2);transform:translateY(-2px);}
+
+  /* ---------- Top bar ---------- */
+  .topbar{background:var(--teal-900);color:#bdd7da;font-size:.9rem;}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;min-height:44px;gap:16px;flex-wrap:wrap;}
+  .topbar a{color:#bdd7da;transition:color .2s;}
+  .topbar a:hover{color:#fff;}
+  .topbar .left{display:flex;align-items:center;gap:9px;}
+  .topbar .left .dot{width:8px;height:8px;border-radius:50%;background:var(--gold-soft);box-shadow:0 0 0 0 rgba(242,179,95,.7);animation:pulse 2.4s infinite;}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(242,179,95,.55)}70%{box-shadow:0 0 0 7px rgba(242,179,95,0)}100%{box-shadow:0 0 0 0 rgba(242,179,95,0)}}
+  .topbar strong{color:#fff;font-weight:600;}
+  .topbar .right{display:flex;gap:22px;}
+
+  /* ---------- Header ---------- */
+  header.site{background:rgba(251,246,238,.82);backdrop-filter:saturate(140%) blur(12px);
+    border-bottom:1px solid var(--line);position:sticky;top:0;z-index:80;transition:box-shadow .3s,background .3s;}
+  header.site.scrolled{box-shadow:var(--shadow-sm);background:rgba(251,246,238,.94);}
+  header.site .wrap{display:flex;align-items:center;justify-content:space-between;min-height:84px;gap:20px;}
+  .brand{display:flex;align-items:center;gap:13px;}
+  .brand .mark{width:48px;height:48px;flex:none;border-radius:13px;box-shadow:var(--shadow-sm);}
+  .brand .name{font-family:"Fraunces";font-weight:600;font-size:1.4rem;color:var(--teal-900);line-height:1;}
+  .brand .name small{display:block;font-family:"Inter";font-weight:600;font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep);margin-top:4px;}
+  nav.main{display:flex;align-items:center;gap:22px;}
+  nav.main a{font-weight:600;color:var(--teal-900);font-size:.96rem;position:relative;padding:4px 0;white-space:nowrap;}
+  nav.main a::after{content:"";position:absolute;left:0;right:100%;bottom:-2px;height:2px;background:var(--gold);transition:right .25s var(--ease);border-radius:2px;}
+  nav.main a:hover::after{right:0;}
+  .nav-cta{display:flex;align-items:center;gap:18px;}
+  .nav-phone{font-weight:800;color:var(--teal-900);font-size:1.06rem;white-space:nowrap;line-height:1.1;}
+  .nav-phone small{display:block;font-weight:600;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep);}
+  .menu-toggle{display:none;background:none;border:0;cursor:pointer;padding:10px;}
+  .menu-toggle span{display:block;width:26px;height:3px;background:var(--teal-900);margin:5px 0;border-radius:2px;transition:.25s var(--ease);}
+  .menu-toggle.open span:nth-child(1){transform:translateY(8px) rotate(45deg);}
+  .menu-toggle.open span:nth-child(2){opacity:0;}
+  .menu-toggle.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg);}
+
+  /* ---------- Hero ---------- */
+  .hero{position:relative;background:linear-gradient(165deg,#0e3a44 0%,#13505d 55%,#1b6877 100%);color:#eaf3f4;overflow:hidden;}
+  /* dawn glow top-right */
+  .hero::before{content:"";position:absolute;right:-180px;top:-220px;width:680px;height:680px;border-radius:50%;
+    background:radial-gradient(circle at 40% 40%,rgba(246,200,154,.42),rgba(226,160,74,.16) 45%,transparent 66%);pointer-events:none;}
+  /* soft blob bottom-left */
+  .hero::after{content:"";position:absolute;left:-160px;bottom:-200px;width:520px;height:520px;border-radius:50%;
+    background:radial-gradient(circle,rgba(27,125,140,.5),transparent 64%);pointer-events:none;}
+  .hero .wrap{display:grid;grid-template-columns:1.08fr .92fr;gap:54px;align-items:center;padding:72px 24px 86px;position:relative;z-index:2;}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.74rem;
+    color:#fbe2c2;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);padding:8px 16px;border-radius:30px;margin-bottom:24px;}
+  .eyebrow svg{flex:none;}
+  .hero h1{color:#fff;margin-bottom:.45em;}
+  .hero h1 .accent{color:var(--gold-soft);font-style:italic;}
+  .hero p.lead{color:#cfe6e8;font-size:1.18rem;max-width:560px;}
+  .hero-actions{display:flex;gap:15px;flex-wrap:wrap;margin:32px 0 30px;}
+  .hero-trust{display:flex;gap:14px 26px;flex-wrap:wrap;font-size:.92rem;color:#bcd9dc;}
+  .hero-trust span{display:flex;align-items:center;gap:9px;}
+  .hero-trust svg{flex:none;}
+
+  /* Hero consultation card */
+  .hero-card{background:rgba(255,255,255,.97);border-radius:22px;box-shadow:var(--shadow-lg);overflow:hidden;position:relative;}
+  .hero-card .card-top{background:linear-gradient(120deg,var(--teal-700),var(--teal-800));padding:26px 30px 22px;color:#fff;position:relative;overflow:hidden;}
+  .hero-card .card-top::after{content:"";position:absolute;right:-40px;top:-50px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,rgba(246,200,154,.4),transparent 65%);}
+  .hero-card .card-top h3{color:#fff;font-size:1.32rem;margin-bottom:4px;position:relative;}
+  .hero-card .card-top p{color:#d6eaec;font-size:.92rem;margin:0;position:relative;}
+  .hero-form{padding:24px 30px 28px;}
+  .hero-form label{display:block;font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--teal-800);margin:0 0 6px;}
+  .hero-form .field{margin-bottom:15px;}
+  .hero-form input,.contact-form input,.contact-form select,.contact-form textarea{
+    width:100%;font-family:"Inter";font-size:1rem;padding:13px 15px;border:1.5px solid var(--line);
+    border-radius:10px;background:var(--cream);color:var(--ink);transition:border-color .2s,box-shadow .2s,background .2s;}
+  .hero-form input:focus,.contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{
+    outline:none;border-color:var(--teal-600);background:#fff;box-shadow:0 0 0 4px rgba(27,125,140,.12);}
+  .hero-form .btn{width:100%;justify-content:center;margin-top:4px;}
+  .hero-form .fineprint{font-size:.8rem;color:var(--ink-soft);margin:12px 0 0;text-align:center;}
+  .hero-form .fineprint a{font-weight:700;}
+
+  /* ---------- Section frame ---------- */
+  section{padding:96px 0;position:relative;}
+  .section-head{max-width:740px;margin:0 auto 56px;text-align:center;}
+  .kicker{display:inline-flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.78rem;color:var(--gold-deep);margin-bottom:16px;}
+  .kicker::before,.kicker.center::after{content:"";width:26px;height:2px;background:var(--gold);border-radius:2px;display:inline-block;}
+  .section-head .kicker{justify-content:center;}
+  .section-head p{font-size:1.1rem;}
+
+  /* Reveal on scroll */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease);}
+  .reveal.in{opacity:1;transform:none;}
+  .d1{transition-delay:.07s}.d2{transition-delay:.14s}.d3{transition-delay:.21s}.d4{transition-delay:.28s}.d5{transition-delay:.35s}
+
+  /* ---------- Stats band ---------- */
+  .stats-band{background:var(--white);border-bottom:1px solid var(--line);padding:0;}
+  .stats-band .wrap{display:grid;grid-template-columns:repeat(4,1fr);}
+  .stat{padding:38px 22px;text-align:center;border-right:1px solid var(--line);}
+  .stat:last-child{border-right:0;}
+  .stat .num{font-family:"Fraunces";font-size:2.6rem;font-weight:600;color:var(--teal-700);line-height:1;letter-spacing:-.02em;}
+  .stat .lbl{font-size:.92rem;color:var(--ink-soft);margin-top:10px;font-weight:600;}
+
+  /* ---------- About / intro ---------- */
+  .intro{background:var(--white);}
+  .intro .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;}
+  .intro .lead-line{font-size:1.16rem;color:var(--ink);font-weight:500;}
+  .about-art{position:relative;}
+  .about-card{background:linear-gradient(160deg,var(--cream),var(--cream-2));border:1px solid var(--line);border-radius:24px;padding:14px;box-shadow:var(--shadow);}
+  .about-badge{position:absolute;right:-14px;bottom:24px;background:#fff;border-radius:16px;box-shadow:var(--shadow);padding:16px 20px;display:flex;align-items:center;gap:13px;max-width:250px;}
+  .about-badge .ring{width:46px;height:46px;border-radius:50%;flex:none;background:var(--teal-50);display:flex;align-items:center;justify-content:center;}
+  .about-badge b{display:block;font-family:"Fraunces";color:var(--teal-900);font-size:1rem;}
+  .about-badge span{font-size:.82rem;color:var(--ink-soft);}
+
+  /* ---------- Services ---------- */
+  .services{background:var(--cream-2);}
+  .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px 30px;box-shadow:var(--shadow-sm);
+    transition:transform .22s var(--ease),box-shadow .22s var(--ease);position:relative;overflow:hidden;}
+  .card::before{content:"";position:absolute;left:0;top:0;height:4px;width:100%;background:linear-gradient(90deg,var(--gold-soft),var(--gold));transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease);}
+  .card:hover{transform:translateY(-6px);box-shadow:var(--shadow);}
+  .card:hover::before{transform:scaleX(1);}
+  .card .ic{width:60px;height:60px;border-radius:15px;background:linear-gradient(160deg,var(--teal-50),var(--teal-100));display:flex;align-items:center;justify-content:center;margin-bottom:20px;}
+  .card h3{margin-bottom:9px;}
+  .card p{font-size:.98rem;margin-bottom:0;}
+
+  /* ---------- Why us ---------- */
+  .why{background:var(--white);}
+  .why .grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:60px;align-items:center;}
+  .why-panel{background:linear-gradient(160deg,#15616d,#0e3a44);border-radius:24px;color:#dcecee;padding:46px;box-shadow:var(--shadow);position:relative;overflow:hidden;}
+  .why-panel::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(246,200,154,.28),transparent 65%);}
+  .why-panel h3{color:#fff;font-size:1.6rem;position:relative;}
+  .why-panel p{color:#c2dadd;position:relative;}
+  .why-panel .label{margin:18px 0 2px;color:#9fc1c5;font-weight:700;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;position:relative;}
+  .why-panel .phone-big{font-family:"Fraunces";font-size:2rem;color:#fff;font-weight:600;position:relative;display:inline-flex;align-items:center;gap:12px;}
+  .why-panel .btn{margin-top:26px;position:relative;}
+  .feature{display:flex;gap:18px;margin-bottom:26px;}
+  .feature:last-child{margin-bottom:0;}
+  .feature .tick{width:46px;height:46px;border-radius:13px;background:linear-gradient(160deg,var(--teal-50),var(--teal-100));flex:none;display:flex;align-items:center;justify-content:center;}
+  .feature h4{font-family:"Fraunces";font-size:1.16rem;margin:2px 0 5px;color:var(--teal-900);}
+  .feature p{margin:0;font-size:.98rem;}
+
+  /* ---------- Process ---------- */
+  .process{background:var(--cream);}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;counter-reset:step;position:relative;}
+  .step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:38px 30px;position:relative;box-shadow:var(--shadow-sm);}
+  .step .n{counter-increment:step;width:56px;height:56px;border-radius:16px;background:linear-gradient(160deg,var(--gold-soft),var(--gold));color:#3a2a10;font-family:"Fraunces";font-weight:700;font-size:1.5rem;display:flex;align-items:center;justify-content:center;margin-bottom:20px;box-shadow:0 10px 22px -8px rgba(201,138,63,.6);}
+  .step .n::before{content:"0" counter(step);}
+  .step h3{font-size:1.22rem;}
+  .step p{font-size:.98rem;margin:0;}
+
+  /* ---------- Testimonials ---------- */
+  .reviews{background:linear-gradient(165deg,#103e49,#0e3a44);color:#dcecee;position:relative;overflow:hidden;}
+  .reviews::before{content:"";position:absolute;left:-140px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(27,125,140,.45),transparent 65%);}
+  .reviews .section-head h2{color:#fff;}
+  .reviews .section-head p{color:#bcd9dc;}
+  .reviews .section-head .kicker{color:var(--gold-soft);}
+  .reviews .section-head .kicker::before,.reviews .section-head .kicker::after{background:var(--gold-soft);}
+  .review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;position:relative;}
+  .review{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);border-radius:var(--radius);padding:32px;backdrop-filter:blur(2px);transition:transform .22s var(--ease),background .22s;}
+  .review:hover{transform:translateY(-5px);background:rgba(255,255,255,.09);}
+  .review .stars{color:var(--gold-soft);font-size:1.05rem;letter-spacing:3px;margin-bottom:16px;}
+  .review p{color:#eef6f7;font-style:italic;font-family:"Fraunces";font-size:1.06rem;line-height:1.55;}
+  .review .who{font-weight:700;color:#fff;font-style:normal;font-family:"Inter";margin-top:14px;display:flex;align-items:center;gap:12px;}
+  .review .who .av{width:42px;height:42px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font-family:"Fraunces";font-weight:600;color:#3a2a10;background:linear-gradient(160deg,var(--gold-soft),var(--gold));}
+  .review .who small{display:block;font-weight:500;color:#9fc1c5;font-size:.84rem;}
+
+  /* ---------- Service area ---------- */
+  .area{background:var(--white);}
+  .area .grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+  .area-list{display:grid;grid-template-columns:1fr 1fr;gap:2px 24px;margin-top:22px;}
+  .area-list li{list-style:none;padding:10px 0 10px 26px;position:relative;font-weight:600;color:var(--teal-900);border-bottom:1px dashed var(--line);}
+  .area-list li::before{content:"";position:absolute;left:0;top:17px;width:9px;height:9px;border-radius:50%;background:var(--gold);}
+  .area .note{margin-top:20px;font-size:.95rem;}
+  .map-frame{border-radius:22px;box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--line);}
+
+  /* ---------- CTA band ---------- */
+  .cta-band{background:linear-gradient(120deg,#15616d 0%,#0e3a44 100%);color:#fff;text-align:center;position:relative;overflow:hidden;}
+  .cta-band::before{content:"";position:absolute;right:-120px;top:-140px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle at 40% 40%,rgba(246,200,154,.34),transparent 64%);}
+  .cta-band::after{content:"";position:absolute;left:-120px;bottom:-160px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(27,125,140,.45),transparent 64%);}
+  .cta-band .wrap{position:relative;z-index:2;}
+  .cta-band h2{color:#fff;}
+  .cta-band p{color:#d6eaec;font-size:1.14rem;max-width:620px;margin:0 auto 30px;}
+  .cta-actions{display:flex;gap:15px;justify-content:center;flex-wrap:wrap;}
+  .cta-band .phone-line{font-family:"Fraunces";font-size:1.5rem;font-weight:500;margin-top:24px;color:#fbe2c2;}
+
+  /* ---------- Contact ---------- */
+  .contact{background:var(--cream-2);}
+  .contact .grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start;}
+  .contact-info .ci{display:flex;gap:16px;align-items:flex-start;margin-bottom:24px;}
+  .contact-info .ci .ic{width:50px;height:50px;border-radius:14px;background:#fff;border:1px solid var(--line);flex:none;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-sm);}
+  .contact-info .ci b{display:block;font-family:"Fraunces";color:var(--teal-900);font-size:1.08rem;margin-bottom:2px;}
+  .contact-info .ci a{font-weight:600;}
+  .contact-info .ci span{color:var(--ink-soft);font-size:.97rem;}
+  .contact-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:36px;box-shadow:var(--shadow);}
+  .contact-card h3{margin-bottom:6px;}
+  .contact-card .sub{font-size:.96rem;margin-bottom:22px;}
+  .contact-form .row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .contact-form label{display:block;font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--teal-800);margin:0 0 6px;}
+  .contact-form .field{margin-bottom:16px;}
+  .contact-form textarea{resize:vertical;min-height:108px;}
+  .contact-form .btn{width:100%;justify-content:center;}
+  .contact-form .fineprint{font-size:.82rem;color:var(--ink-soft);margin:14px 0 0;text-align:center;}
+
+  /* ---------- Footer ---------- */
+  footer{background:#0c2f37;color:#a9c4c8;font-size:.95rem;padding:72px 0 28px;}
+  footer .cols{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.3fr;gap:44px;}
+  footer h4{color:#fff;font-family:"Inter";font-weight:700;font-size:1rem;letter-spacing:.03em;margin-bottom:18px;}
+  footer a{color:#a9c4c8;transition:color .2s;}
+  footer a:hover{color:#fff;}
+  footer li{margin-bottom:11px;list-style:none;}
+  footer .brand .name{color:#fff;font-family:"Fraunces";font-weight:600;font-size:1.3rem;}
+  footer .brand .name small{color:var(--gold-soft);display:block;font-family:"Inter";font-weight:600;font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;margin-top:4px;}
+  footer .foot-note{margin-top:18px;font-size:.92rem;line-height:1.7;color:#83a4a9;max-width:330px;}
+  .foot-contact li{display:flex;gap:10px;align-items:flex-start;color:#bcd2d5;}
+  .foot-contact svg{flex:none;margin-top:3px;}
+  .legal{border-top:1px solid rgba(255,255,255,.1);margin-top:48px;padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.85rem;color:#7299a0;}
+  .legal a{color:#7299a0;}
+
+  /* ---------- Responsive ---------- */
+  @media(max-width:1024px){
+    .hero .wrap,.intro .grid,.why .grid,.area .grid,.contact .grid{grid-template-columns:1fr;}
+    .why-panel{order:2;}
+    .service-grid,.steps,.review-grid{grid-template-columns:1fr 1fr;}
+    footer .cols{grid-template-columns:1fr 1fr;}
+    .about-art{max-width:520px;margin:0 auto;}
+    /* Nav collapses to a hamburger menu */
+    nav.main{display:none;position:absolute;top:84px;left:0;right:0;background:rgba(251,246,238,.98);backdrop-filter:blur(10px);
+      flex-direction:column;align-items:flex-start;gap:0;padding:8px 24px 20px;border-bottom:1px solid var(--line);box-shadow:var(--shadow);}
+    nav.main.open{display:flex;}
+    nav.main a{padding:14px 0;width:100%;border-bottom:1px solid var(--line);font-size:1rem;}
+    nav.main a::after{display:none;}
+    .menu-toggle{display:block;}
+    .nav-phone{display:none;}
+    .stats-band .wrap{grid-template-columns:1fr 1fr;}
+    .stat:nth-child(2){border-right:0;}
+    .stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid var(--line);}
+  }
+  @media(max-width:560px){
+    body{font-size:17px;}
+    section{padding:64px 0;}
+    .service-grid,.steps,.review-grid,.area-list,footer .cols,.contact-form .row{grid-template-columns:1fr;}
+    .topbar .right{display:none;}
+    .hero .wrap{padding:48px 24px 60px;}
+    .about-badge{position:static;margin-top:14px;max-width:none;}
+    .legal{flex-direction:column;}
+    .nav-cta .btn-gold{display:none;}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{scroll-behavior:auto!important;}
+    .reveal{opacity:1!important;transform:none!important;transition:none!important;}
+    .topbar .left .dot{animation:none;}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="left"><span class="dot" aria-hidden="true"></span> Caregivers available <strong>24 hours a day, 7 days a week</strong></div>
+    <div class="right">
+      <a href="#area">Service Area</a>
+      <a href="#why">Why Us</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site" id="header">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Sabah Home Care — home">
+      <svg class="mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs><linearGradient id="bgm" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#1b7d8c"/><stop offset="1" stop-color="#0e3a44"/></linearGradient></defs>
+        <rect width="48" height="48" rx="13" fill="url(#bgm)"/>
+        <path d="M16 16a8 8 0 0 1 16 0" fill="none" stroke="#f2b35f" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M24 4.6v2.6M12.6 8.4l1.7 1.9M35.4 8.4l-1.7 1.9" stroke="#f2b35f" stroke-width="2.1" stroke-linecap="round"/>
+        <path d="M24 18.5l10 7.8V39a1.6 1.6 0 0 1-1.6 1.6H15.6A1.6 1.6 0 0 1 14 39V26.3L24 18.5z" fill="#dcecee"/>
+        <path d="M24 36.6c-3-2-5-3.6-5-5.9 0-1.5 1.2-2.6 2.7-2.6 1 0 1.8.5 2.3 1.4.6-.9 1.4-1.4 2.4-1.4 1.5 0 2.6 1.1 2.6 2.6 0 2.3-2 3.9-5 5.9z" fill="#e2a04a"/>
+      </svg>
+      <span class="name">Sabah Home Care<small>Northern Virginia</small></span>
+    </a>
+
+    <nav class="main" id="nav" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#process">How It Works</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#area">Service Area</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:+15713158263">(571) 315-8263<small>Call us today</small></a>
+      <a class="btn btn-gold" href="#contact">Free Consultation</a>
+      <button class="menu-toggle" id="toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<!-- HERO -->
+<section class="hero" id="top" style="padding:0;" aria-labelledby="hero-h">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5l8-3z" stroke="#f2b35f" stroke-width="2" stroke-linejoin="round"/></svg>
+        Licensed In-Home Care · Northern Virginia
+      </span>
+      <h1 id="hero-h">Compassionate care, right where they feel <span class="accent">most at home.</span></h1>
+      <p class="lead">From companion care to skilled nursing, Sabah Home Care helps seniors and families across Northern Virginia live safely, comfortably, and independently — in the home they love.</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="#contact">Schedule a Free Consultation</a>
+        <a class="btn btn-ghost-light" href="tel:+15713158263">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1l-2.1 2.2z" fill="#fff"/></svg>
+          Call (571) 315-8263
+        </a>
+      </div>
+      <div class="hero-trust">
+        <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5l8-3z" stroke="#e6b878" stroke-width="2" stroke-linejoin="round"/></svg> Virginia-Licensed &amp; Insured</span>
+        <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#e6b878" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Background-Checked Caregivers</span>
+        <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#e6b878" stroke-width="2"/><path d="M12 7v5l3 2" stroke="#e6b878" stroke-width="2" stroke-linecap="round"/></svg> Skilled &amp; Personal Care</span>
+      </div>
+    </div>
+
+    <div class="hero-card reveal">
+      <div class="card-top">
+        <h3>Request a Free Consultation</h3>
+        <p>A real care coordinator — never an automated line — will help you build a plan that fits your family.</p>
+      </div>
+      <form class="hero-form js-care-form" data-context="Hero consultation request" novalidate>
+        <div class="field">
+          <label for="h-name">Your name</label>
+          <input id="h-name" name="name" type="text" autocomplete="name" placeholder="Jane Doe" required>
+        </div>
+        <div class="field">
+          <label for="h-phone">Phone</label>
+          <input id="h-phone" name="phone" type="tel" autocomplete="tel" placeholder="(571) 000-0000" required>
+        </div>
+        <div class="field">
+          <label for="h-email">Email</label>
+          <input id="h-email" name="email" type="email" autocomplete="email" placeholder="you@example.com">
+        </div>
+        <button class="btn btn-gold" type="submit">Get My Free Consultation</button>
+        <p class="fineprint">Prefer to talk now? Call <a href="tel:+15713158263">(571)&nbsp;315-8263</a></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAND -->
+<div class="stats-band">
+  <div class="wrap">
+    <div class="stat reveal"><div class="num">2020</div><div class="lbl">Locally Established</div></div>
+    <div class="stat reveal d1"><div class="num">24/7</div><div class="lbl">Care Availability</div></div>
+    <div class="stat reveal d2"><div class="num">100%</div><div class="lbl">Screened Caregivers</div></div>
+    <div class="stat reveal d3"><div class="num">VDH</div><div class="lbl">State-Licensed (OLC)</div></div>
+  </div>
+</div>
+
+<!-- ABOUT / INTRO -->
+<section class="intro" id="about" aria-labelledby="about-h">
+  <div class="wrap">
+    <div class="grid">
+      <div class="reveal">
+        <span class="kicker">Welcome to Sabah Home Care</span>
+        <h2 id="about-h">Locally owned care, rooted in Northern Virginia</h2>
+        <p class="lead-line">Sabah Home Care is a locally owned, Virginia-licensed home care agency based in Chantilly — caring for families throughout Northern Virginia.</p>
+        <p>Founded in 2020 and led by our president, Zohra Hassanzadeh, we were built on a simple belief: every person deserves to age with dignity, comfort, and independence — in the home they love.</p>
+        <p>The word <span class="em">Sabah</span> means "morning" — a fresh start, a new day. That's the spirit we bring to every visit: a reassuring presence at the start of each day, and steady, compassionate support through every hour after. Every care plan begins with an in-person conversation, so the caregiver we match feels less like a service and more like family.</p>
+        <a class="btn btn-outline" href="#why">Why Families Choose Us
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <div class="about-art reveal d2">
+        <div class="about-card">
+          <!-- Warm "dawn at home" illustration: a sunrise through a window, a cozy room -->
+          <svg viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A warm sunrise through the window of a cared-for home" style="width:100%;display:block;border-radius:16px;">
+            <defs>
+              <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#fbe3c2"/><stop offset=".55" stop-color="#f6c89a"/><stop offset="1" stop-color="#e9a86a"/>
+              </linearGradient>
+              <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#163f49"/><stop offset="1" stop-color="#0e3a44"/>
+              </linearGradient>
+              <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+                <stop offset="0" stop-color="#fff4e2"/><stop offset="1" stop-color="#f4b365"/>
+              </radialGradient>
+            </defs>
+            <rect width="520" height="420" fill="url(#wall)"/>
+            <!-- window -->
+            <rect x="78" y="54" width="364" height="262" rx="14" fill="#0b2d34"/>
+            <rect x="92" y="68" width="336" height="234" rx="9" fill="url(#sky)"/>
+            <circle cx="260" cy="214" r="58" fill="url(#sun)"/>
+            <path d="M92 232c46-26 70 14 118 0s78-30 118-6v76H92z" fill="#e7a96b" opacity=".55"/>
+            <path d="M92 252c52-20 78 18 126 4s74-26 110-4v50H92z" fill="#d98f4f" opacity=".6"/>
+            <!-- window frame mullions -->
+            <rect x="252" y="68" width="16" height="234" fill="#0b2d34"/>
+            <rect x="92" y="176" width="336" height="16" fill="#0b2d34"/>
+            <!-- sill + plant -->
+            <rect x="64" y="316" width="392" height="20" rx="6" fill="#0b2d34"/>
+            <g>
+              <rect x="120" y="288" width="40" height="30" rx="5" fill="#c47f2f"/>
+              <path d="M140 288c-14-6-22-22-16-38 14 6 20 22 16 38z" fill="#2f8c63"/>
+              <path d="M140 288c14-8 20-26 12-42-12 8-18 26-12 42z" fill="#37a374"/>
+            </g>
+            <!-- mug, steam -->
+            <g>
+              <rect x="340" y="296" width="40" height="22" rx="5" fill="#dcecee"/>
+              <path d="M380 300h8a6 6 0 0 1 0 12h-8" fill="none" stroke="#dcecee" stroke-width="4"/>
+              <path d="M352 286c-4-6 4-8 0-14M364 286c-4-6 4-8 0-14" stroke="#9ec7ce" stroke-width="3" stroke-linecap="round" fill="none" opacity=".8"/>
+            </g>
+            <!-- frame around whole window -->
+            <rect x="70" y="46" width="380" height="278" rx="18" fill="none" stroke="#dcecee" stroke-width="6" opacity=".5"/>
+            <!-- little heart sun nod -->
+            <path d="M260 196c-2.6-4-8.5-3.4-8.5 1.5 0 3.6 4.6 6.8 8.5 9.7 3.9-2.9 8.5-6.1 8.5-9.7 0-4.9-5.9-5.5-8.5-1.5z" fill="#c4612f" opacity=".55"/>
+          </svg>
+        </div>
+        <div class="about-badge">
+          <span class="ring" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5l8-3z" stroke="#15616d" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#15616d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <div><b>Licensed &amp; Insured</b><span>Virginia Dept. of Health · OLC</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services" aria-labelledby="services-h">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">Our Home Care Services</span>
+      <h2 id="services-h">Personalized care for every stage of life</h2>
+      <p>Whether your loved one needs a few hours of companionship a week or skilled, around-the-clock support, we tailor every plan to fit their needs and budget.</p>
+    </div>
+    <div class="service-grid">
+      <div class="card reveal">
+        <div class="ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 21c-5-3.2-8-6-8-10a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 11c0 4-3 6.8-8 10z" stroke="#15616d" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+        <h3>Personal Care</h3>
+        <p>Respectful, hands-on help with bathing, dressing, grooming, mobility, toileting, and the daily activities that keep life comfortable.</p>
+      </div>
+      <div class="card reveal d1">
+        <div class="ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3.2" stroke="#15616d" stroke-width="1.8"/><circle cx="16.5" cy="9" r="2.6" stroke="#15616d" stroke-width="1.8"/><path d="M3.5 19c0-3.3 2.5-5 5.5-5s5.5 1.7 5.5 5M15 19c0-2.4 1.3-4 3.5-4" stroke="#15616d" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>Companion Care</h3>
+        <p>Friendly company, conversation, errands, transportation, meal prep, and light housekeeping to brighten every day at home.</p>
+      </div>
+      <div class="card reveal d2">
+        <div class="ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 4v16M4 12h16" stroke="#15616d" stroke-width="2.2" stroke-linecap="round"/><circle cx="12" cy="12" r="9.2" stroke="#15616d" stroke-width="1.6" opacity=".35"/></svg></div>
+        <h3>Skilled Nursing</h3>
+        <p>Physician-supervised nursing care — medication management, wound care, monitoring, and clinical support delivered safely at home.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M7 3v6a5 5 0 0 0 10 0V3" stroke="#15616d" stroke-width="1.8" stroke-linecap="round"/><path d="M12 14v4a3 3 0 0 0 6 0v-1" stroke="#15616d" stroke-width="1.8" stroke-linecap="round"/><circle cx="18" cy="15" r="2.3" fill="#e2a04a"/></svg></div>
+        <h3>Therapy Services</h3>
+        <p>Physical, occupational, and speech-language therapy to restore strength, mobility, and confidence after illness or injury.</p>
+      </div>
+      <div class="card reveal d1">
+        <div class="ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#15616d" stroke-width="1.8"/><path d="M12 7v5l3.5 2" stroke="#15616d" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>Respite &amp; 24-Hour Care</h3>
+        <p>Short-term relief for family caregivers and continuous, round-the-clock or live-in support so your loved one is never alone.</p>
+      </div>
+      <div class="card reveal d2">
+        <div class="ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 4a6 6 0 0 0-6 6c0 2.5 1.5 3.5 1.5 6h9c0-2.5 1.5-3.5 1.5-6a6 6 0 0 0-6-6z" stroke="#15616d" stroke-width="1.8" stroke-linejoin="round"/><path d="M9.5 20h5" stroke="#15616d" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>Alzheimer's &amp; Dementia Care</h3>
+        <p>Specially trained caregivers use routine, patience, and gentle redirection to preserve dignity and bring calm to each day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why" id="why" aria-labelledby="why-h">
+  <div class="wrap">
+    <div class="grid">
+      <div class="why-panel reveal">
+        <h3>Not sure where to start?</h3>
+        <p>Call us and speak with a real care coordinator. We'll listen, answer your questions, and help you understand your options — with no pressure and no obligation.</p>
+        <div class="label">Speak with our team today</div>
+        <a class="phone-big" href="tel:+15713158263">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1l-2.1 2.2z" fill="#f2b35f"/></svg>
+          (571) 315-8263
+        </a>
+        <br>
+        <a class="btn btn-gold" href="#contact">Request a Free Consultation</a>
+      </div>
+      <div>
+        <span class="kicker reveal">Why Families Choose Sabah</span>
+        <h2 id="why-h" class="reveal" style="margin-bottom:34px;">Care delivered with heart, held to a higher standard</h2>
+
+        <div class="feature reveal d1">
+          <div class="tick"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#15616d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div><h4>Carefully Screened Caregivers</h4><p>Every caregiver passes thorough background checks, reference checks, and ongoing training before entering a client's home.</p></div>
+        </div>
+        <div class="feature reveal d2">
+          <div class="tick"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#15616d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div><h4>Skilled &amp; Personal Care, Together</h4><p>From companionship to skilled nursing and therapy, we coordinate every level of care under one trusted, local roof.</p></div>
+        </div>
+        <div class="feature reveal d3">
+          <div class="tick"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#15616d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div><h4>Personalized Care Plans</h4><p>No two families are alike. We build a custom plan around your loved one's routines, preferences, and goals — and adapt as needs change.</p></div>
+        </div>
+        <div class="feature reveal d4">
+          <div class="tick"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#15616d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div><h4>A Real Person Answers</h4><p>When you call, you reach a caring local coordinator — not an automated menu or a distant call center.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process" aria-labelledby="process-h">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">Getting Started Is Simple</span>
+      <h2 id="process-h">Three easy steps to peace of mind</h2>
+      <p>We've made it easy to begin care for your loved one — most families are up and running within just a few days.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="n"></div>
+        <h3>Free Consultation</h3>
+        <p>Call us or request a callback. We'll discuss your situation, answer questions, and explain your options — at no cost and no obligation.</p>
+      </div>
+      <div class="step reveal d1">
+        <div class="n"></div>
+        <h3>In-Home Assessment</h3>
+        <p>A care coordinator visits to understand your loved one's needs, home, and routines, then designs a personalized care plan.</p>
+      </div>
+      <div class="step reveal d2">
+        <div class="n"></div>
+        <h3>Meet Your Caregiver</h3>
+        <p>We carefully match a compatible caregiver to your family and begin care — guided by a plan built around your loved one.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<!-- NOTE: These are sample testimonials. Replace with real, written client reviews before launch. -->
+<section class="reviews" id="reviews" aria-labelledby="reviews-h">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">What Families Are Saying</span>
+      <h2 id="reviews-h">Trusted by Northern Virginia families</h2>
+      <p>Real feedback from the families we're honored to serve every day.</p>
+    </div>
+    <div class="review-grid">
+      <div class="review reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p>"The team was informed, professional, and personable. My parents needed support recovering from surgery, and their caregiver was a true delight. I finally felt at ease."</p>
+        <div class="who"><span class="av" aria-hidden="true">D</span><div>Diane M.<small>Fairfax, VA</small></div></div>
+      </div>
+      <div class="review reveal d1">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p>"When Mom came home from the hospital and needed care we couldn't provide ourselves, Sabah was a lifesaver. On time every day, kind, and genuinely caring."</p>
+        <div class="who"><span class="av" aria-hidden="true">B</span><div>Brittany T.<small>Chantilly, VA</small></div></div>
+      </div>
+      <div class="review reveal d2">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p>"A very honest and caring agency. The office staff always keeps in touch and lets us know of any changes. I would recommend them to anyone."</p>
+        <div class="who"><span class="av" aria-hidden="true">R</span><div>Robert &amp; Kim H.<small>Ashburn, VA</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="area" id="area" aria-labelledby="area-h">
+  <div class="wrap">
+    <div class="grid">
+      <div class="reveal">
+        <span class="kicker">Proudly Serving Northern Virginia</span>
+        <h2 id="area-h">Home care across Northern Virginia</h2>
+        <p>From our home base in Chantilly, our caregivers serve seniors and families throughout Northern Virginia's cities, suburbs, and surrounding communities. Don't see your town? Give us a call — we're always expanding.</p>
+        <ul class="area-list">
+          <li>Chantilly</li>
+          <li>Centreville</li>
+          <li>Fairfax</li>
+          <li>Herndon</li>
+          <li>Reston</li>
+          <li>Vienna</li>
+          <li>Oakton</li>
+          <li>Falls Church</li>
+          <li>McLean</li>
+          <li>Ashburn</li>
+          <li>Sterling</li>
+          <li>Leesburg</li>
+          <li>Arlington</li>
+          <li>Alexandria</li>
+          <li>Manassas</li>
+          <li>Gainesville</li>
+        </ul>
+        <p class="note">Serving Fairfax, Loudoun, Prince William &amp; Arlington counties and surrounding areas.</p>
+      </div>
+      <div class="reveal d2">
+        <div class="map-frame">
+          <svg viewBox="0 0 460 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stylized map of the Northern Virginia service area centered on Chantilly" style="width:100%;display:block;background:#dcecee;">
+            <defs>
+              <linearGradient id="land" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#2f8190"/><stop offset="1" stop-color="#1b6877"/>
+              </linearGradient>
+            </defs>
+            <rect width="460" height="360" fill="#e7f1f2"/>
+            <!-- abstract rivers / Potomac -->
+            <path d="M300 20c20 50-10 70 10 120s40 60 30 120-50 60-30 80" fill="none" stroke="#bcd9dc" stroke-width="10" stroke-linecap="round"/>
+            <!-- region landmass -->
+            <path d="M40 120 L120 78 L210 96 L300 70 L410 118 L398 196 L330 224 L286 300 L226 282 L186 320 L150 286 L86 270 L52 196 Z"
+                  fill="url(#land)" opacity=".92" stroke="#0e3a44" stroke-width="3" stroke-linejoin="round"/>
+            <!-- county hint lines -->
+            <path d="M150 90 L168 250 M250 84 L262 268 M70 190 L360 210" stroke="#0e3a44" stroke-width="1.4" opacity=".22" stroke-dasharray="5 7"/>
+
+            <!-- city dots -->
+            <g font-family="Inter, sans-serif" font-weight="700">
+              <!-- Chantilly (HQ) -->
+              <circle cx="190" cy="176" r="13" fill="#e2a04a" opacity=".25"/>
+              <circle cx="190" cy="176" r="7" fill="#e2a04a" stroke="#fff" stroke-width="2"/>
+              <text x="190" y="160" font-size="14" fill="#0e3a44" text-anchor="middle">Chantilly</text>
+              <text x="190" y="200" font-size="10" fill="#0e3a44" text-anchor="middle" opacity=".7">Our home base</text>
+
+              <circle cx="262" cy="150" r="6" fill="#15616d" stroke="#fff" stroke-width="2"/><text x="272" y="146" font-size="12.5" fill="#0e3a44">Fairfax</text>
+              <circle cx="120" cy="138" r="6" fill="#15616d" stroke="#fff" stroke-width="2"/><text x="58" y="134" font-size="12.5" fill="#0e3a44">Ashburn</text>
+              <circle cx="334" cy="192" r="6" fill="#15616d" stroke="#fff" stroke-width="2"/><text x="296" y="212" font-size="12.5" fill="#0e3a44">Arlington</text>
+              <circle cx="150" cy="262" r="6" fill="#15616d" stroke="#fff" stroke-width="2"/><text x="92" y="280" font-size="12.5" fill="#0e3a44">Manassas</text>
+              <circle cx="300" cy="118" r="6" fill="#15616d" stroke="#fff" stroke-width="2"/><text x="310" y="114" font-size="12.5" fill="#0e3a44">Reston</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band" aria-labelledby="cta-h">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker center" style="color:#fbe2c2;justify-content:center;">A New Day, Cared For</span>
+      <h2 id="cta-h">Ready to give your family peace of mind?</h2>
+      <p>Reach out today for a free, no-obligation consultation. We'll help you find the right care for your loved one — and answer every question along the way.</p>
+      <div class="cta-actions">
+        <a class="btn btn-gold" href="tel:+15713158263">Call (571) 315-8263</a>
+        <a class="btn btn-white" href="#contact">Request a Callback</a>
+      </div>
+      <div class="phone-line">Available 24 / 7 &nbsp;•&nbsp; Serving all of Northern Virginia</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <div class="section-head reveal" style="text-align:left;margin-bottom:44px;max-width:none;">
+      <span class="kicker">Get in Touch</span>
+      <h2 id="contact-h">Let's talk about your family's care</h2>
+    </div>
+    <div class="grid">
+      <div class="contact-info reveal">
+        <div class="ci">
+          <span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1l-2.1 2.2z" fill="#15616d"/></svg></span>
+          <div><b>Call us</b><a href="tel:+15713158263">(571) 315-8263</a><br><span>A real coordinator answers — 24/7.</span></div>
+        </div>
+        <div class="ci">
+          <span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="#15616d" stroke-width="1.8"/><path d="M4 7l8 6 8-6" stroke="#15616d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div><b>Email us</b><a href="mailto:sabahhomecare@yahoo.com">sabahhomecare@yahoo.com</a><br><span>We reply promptly during office hours.</span></div>
+        </div>
+        <div class="ci">
+          <span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11z" stroke="#15616d" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.6" stroke="#15616d" stroke-width="1.8"/></svg></span>
+          <div><b>Visit us</b><span>4221 Walney Road, Suite 500-C<br>Chantilly, VA 20151</span></div>
+        </div>
+        <div class="ci">
+          <span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#15616d" stroke-width="1.8"/><path d="M12 7v5l3 2" stroke="#15616d" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+          <div><b>Hours</b><span>Office: Mon–Fri, 9:00am – 5:00pm<br>Care: available 24 / 7</span></div>
+        </div>
+      </div>
+
+      <div class="contact-card reveal d2">
+        <h3>Request a free consultation</h3>
+        <p class="sub">Tell us a little about your situation and we'll get right back to you.</p>
+        <form class="contact-form js-care-form" data-context="Website contact form" novalidate>
+          <div class="row">
+            <div class="field">
+              <label for="c-name">Your name</label>
+              <input id="c-name" name="name" type="text" autocomplete="name" placeholder="Jane Doe" required>
+            </div>
+            <div class="field">
+              <label for="c-phone">Phone</label>
+              <input id="c-phone" name="phone" type="tel" autocomplete="tel" placeholder="(571) 000-0000" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="c-email">Email</label>
+              <input id="c-email" name="email" type="email" autocomplete="email" placeholder="you@example.com">
+            </div>
+            <div class="field">
+              <label for="c-for">Care is for</label>
+              <select id="c-for" name="care_for">
+                <option value="">Select…</option>
+                <option>My parent</option>
+                <option>My spouse</option>
+                <option>Myself</option>
+                <option>Another loved one</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="c-msg">How can we help?</label>
+            <textarea id="c-msg" name="message" placeholder="A few words about the care you're looking for…"></textarea>
+          </div>
+          <button class="btn btn-gold" type="submit">Send My Request</button>
+          <p class="fineprint">This opens your email app to send securely to our team. Prefer to talk? Call <a href="tel:+15713158263">(571)&nbsp;315-8263</a>.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer id="careers">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="brand" style="display:flex;align-items:center;gap:13px;margin-bottom:8px;">
+          <svg class="mark" viewBox="0 0 48 48" width="46" height="46" fill="none" aria-hidden="true">
+            <defs><linearGradient id="bgf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b7d8c"/><stop offset="1" stop-color="#0e3a44"/></linearGradient></defs>
+            <rect width="48" height="48" rx="13" fill="url(#bgf)"/>
+            <path d="M16 16a8 8 0 0 1 16 0" fill="none" stroke="#f2b35f" stroke-width="2.4" stroke-linecap="round"/>
+            <path d="M24 4.6v2.6M12.6 8.4l1.7 1.9M35.4 8.4l-1.7 1.9" stroke="#f2b35f" stroke-width="2.1" stroke-linecap="round"/>
+            <path d="M24 18.5l10 7.8V39a1.6 1.6 0 0 1-1.6 1.6H15.6A1.6 1.6 0 0 1 14 39V26.3L24 18.5z" fill="#dcecee"/>
+            <path d="M24 36.6c-3-2-5-3.6-5-5.9 0-1.5 1.2-2.6 2.7-2.6 1 0 1.8.5 2.3 1.4.6-.9 1.4-1.4 2.4-1.4 1.5 0 2.6 1.1 2.6 2.6 0 2.3-2 3.9-5 5.9z" fill="#e2a04a"/>
+          </svg>
+          <span class="name">Sabah Home Care<small>Northern Virginia</small></span>
+        </div>
+        <p class="foot-note">Compassionate, locally owned in-home care helping Northern Virginia seniors live safely and independently in the homes they love.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Personal Care</a></li>
+          <li><a href="#services">Companion Care</a></li>
+          <li><a href="#services">Skilled Nursing</a></li>
+          <li><a href="#services">Therapy Services</a></li>
+          <li><a href="#services">24-Hour &amp; Live-In Care</a></li>
+          <li><a href="#services">Dementia &amp; Alzheimer's Care</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#why">Why Choose Us</a></li>
+          <li><a href="#process">How It Works</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#area">Service Area</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in Touch</h4>
+        <ul class="foot-contact">
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1l-2.1 2.2z" fill="#a9c4c8"/></svg> <a href="tel:+15713158263">(571) 315-8263</a></li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="#a9c4c8" stroke-width="1.8"/><path d="M4 7l8 6 8-6" stroke="#a9c4c8" stroke-width="1.8" stroke-linecap="round"/></svg> <a href="mailto:sabahhomecare@yahoo.com">sabahhomecare@yahoo.com</a></li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11z" stroke="#a9c4c8" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" stroke="#a9c4c8" stroke-width="1.8"/></svg> 4221 Walney Road, Suite 500-C<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chantilly, VA 20151</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#a9c4c8" stroke-width="1.8"/><path d="M12 7v5l3 2" stroke="#a9c4c8" stroke-width="1.8" stroke-linecap="round"/></svg> Office: Mon–Fri · Care: 24/7</li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© <span id="year">2026</span> Sabah Home Care, LLC. All rights reserved. &nbsp;|&nbsp; Licensed by the Virginia Department of Health (OLC). &nbsp;|&nbsp; NPI 1023635695</span>
+      <span><a href="#about">Privacy Policy</a> &nbsp;·&nbsp; <a href="#about">Terms of Service</a> &nbsp;·&nbsp; <a href="#about">Accessibility</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ----- Mobile nav -----
+  (function(){
+    var t = document.getElementById('toggle');
+    var n = document.getElementById('nav');
+    if (t && n) {
+      t.addEventListener('click', function(){
+        var open = n.classList.toggle('open');
+        t.classList.toggle('open', open);
+        t.setAttribute('aria-expanded', open ? 'true' : 'false');
+        t.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      });
+      n.querySelectorAll('a').forEach(function(a){
+        a.addEventListener('click', function(){
+          n.classList.remove('open'); t.classList.remove('open');
+          t.setAttribute('aria-expanded','false');
+        });
+      });
+    }
+  })();
+
+  // ----- Sticky header shadow on scroll -----
+  (function(){
+    var h = document.getElementById('header');
+    if(!h) return;
+    var onScroll = function(){ h.classList.toggle('scrolled', window.scrollY > 8); };
+    window.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
+  })();
+
+  // ----- Reveal on scroll -----
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){
+      els.forEach(function(el){ el.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {threshold:.14, rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){ io.observe(el); });
+  })();
+
+  // ----- Care request forms → open email with prefilled details -----
+  (function(){
+    document.querySelectorAll('.js-care-form').forEach(function(form){
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        var get = function(name){ var el = form.querySelector('[name="'+name+'"]'); return el ? el.value.trim() : ''; };
+        var name = get('name'), phone = get('phone'), email = get('email'),
+            careFor = get('care_for'), message = get('message');
+        if(!name || !phone){
+          var firstEmpty = !name ? form.querySelector('[name="name"]') : form.querySelector('[name="phone"]');
+          if(firstEmpty) firstEmpty.focus();
+          return;
+        }
+        var ctx = form.getAttribute('data-context') || 'Website';
+        var lines = [
+          'New consultation request from the Sabah Home Care website',
+          '(' + ctx + ')', '',
+          'Name:  ' + name,
+          'Phone: ' + phone
+        ];
+        if(email)   lines.push('Email: ' + email);
+        if(careFor) lines.push('Care is for: ' + careFor);
+        if(message) lines.push('', 'Message:', message);
+        var subject = 'Free Consultation Request — ' + name;
+        var body = lines.join('\n');
+        window.location.href = 'mailto:sabahhomecare@yahoo.com'
+          + '?subject=' + encodeURIComponent(subject)
+          + '&body=' + encodeURIComponent(body);
+      });
+    });
+  })();
+
+  // ----- Footer year -----
+  (function(){
+    var y = document.getElementById('year');
+    if(y){ y.textContent = new Date().getFullYear(); }
+  })();
+</script>
+</body>
+</html>
