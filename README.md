@@ -3,9 +3,10 @@
 A polished, single-page marketing website for **Sabah Home Care, LLC**, a Virginia‑licensed,
 locally owned in‑home care agency based in Chantilly, serving families across Northern Virginia.
 
-🔗 **Live site:** https://navidysz.github.io/sabah-homecare/
+This repository is the **source of truth** for the site. The website is **stored here on GitHub**,
+and the production **server pulls the latest version from this repo**. GitHub Pages is intentionally **not** used.
 
-![Sabah Home Care](https://img.shields.io/badge/status-live-2f8190) ![No build step](https://img.shields.io/badge/build-none-c98a3f)
+![No build step](https://img.shields.io/badge/build-none-c98a3f) ![Static](https://img.shields.io/badge/static-HTML%2FCSS%2FJS-2f8190)
 
 ---
 
@@ -64,11 +65,37 @@ python3 -m http.server 4321
 # then visit http://localhost:4321
 ```
 
-## 🚀 Deploy (GitHub Pages)
+## 🚀 Deployment — server pulls from GitHub
 
-This repo is set up to publish from the `main` branch root via GitHub Pages.
-Push to `main` and the site updates automatically at the live URL above.
-(Settings → Pages → Source: *Deploy from a branch* → `main` / `/root`.)
+GitHub here is just storage/source. The live server fetches the site from this repo. Pick whichever fits your setup:
+
+**A. First-time setup on the server** (clone into the web root once):
+
+```bash
+git clone https://github.com/NavidYSZ/sabah-homecare.git /var/www/sabah-homecare
+```
+
+**B. Auto-update — cron pull** (e.g. every 5 minutes):
+
+```bash
+*/5 * * * * cd /var/www/sabah-homecare && git pull --ff-only origin main >/dev/null 2>&1
+```
+
+**C. Auto-update — push webhook** (instant): add a GitHub webhook (repo → Settings → Webhooks)
+pointing at a small endpoint on your server that runs `git pull --ff-only` when it receives the `push` event.
+
+**D. Single-file fetch** (if you only want `index.html`, no git):
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/NavidYSZ/sabah-homecare/main/index.html -o /var/www/sabah-homecare/index.html
+```
+
+> If you later make this repo **private**, give the server read-only access with a
+> [deploy key](https://docs.github.com/authentication/connecting-to-github-with-ssh/managing-deploy-keys)
+> or a fine-grained token, and clone via SSH (`git@github.com:NavidYSZ/sabah-homecare.git`).
+
+Once your server is serving the site on a real domain, set the canonical/OG URL near the top of
+`index.html` (there's a commented placeholder for it).
 
 ---
 
